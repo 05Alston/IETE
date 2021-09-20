@@ -144,6 +144,17 @@ body{
 .card-redirect:focus{
     background-color: var(--text-accent);
 }
+
+/* Carousel */
+.carousel {
+    height: 100vh;
+}
+
+.carousel-img {
+    height: 100vh;
+    object-fit: cover;
+}
+
 /* Former team page css */
 .team-2020{
     background: url(assets/2020.png); 
