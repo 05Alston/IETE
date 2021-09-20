@@ -4,6 +4,7 @@
     --text-dark-accent:#13181c;
     --bg-accent:#43d3a3;
     --transition: 0.1s ease;
+    --nav-margin:80px;
 
 }
 *::before,
@@ -13,11 +14,12 @@
 
 body{
     
-    background: white;
+    background: floralwhite;
     font-family: 'Ubuntu Mono', monospace;
     font-size: 14px;
     margin: 0;
     padding: 0;
+
 
 }
 .curr-team-card{
@@ -28,15 +30,14 @@ body{
 }
 .team-head{
     display: grid;
-    justify-items: center;
+    place-items: center;
     gap: 5rem;
     padding-left:8rem;padding-right:8rem;
     grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
 }
 .team{
     display: grid;
-    justify-items: center;
-    align-items: center;
+    place-items: center;
     gap: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
 }
@@ -92,6 +93,7 @@ body{
     font-size: 1.3rem;
     width: max-content;
     position: relative;
+    padding-bottom: 3px;
     
 }
 
@@ -144,34 +146,139 @@ body{
 }
 /* Former team page css */
 .team-2020{
-    background: url(2020.png); width: 13.07cm;
-    height: 18.50cm; position: relative;
+    background: url(assets/2020.png); 
+    width: 13.07cm;
+    height: 18.50cm; 
+    position: relative;
 }
-.team-2020:hover .square{
+.circle,
+.square{
     stroke:#45abff;
+    opacity: 0;
+    transition: 0.2s;
 }
 .team-2019{
-    background: url(2019.png); width: 13.07cm;
-    height: 18.50cm; position: relative;
+    background: url(assets/2019.png);
+
+    width: 13.07cm;
+    height: 18.50cm; 
+    position: relative;
 }
+.team-2020:hover .square,
 .team-2019:hover .circle{
-    stroke:#e7dbb7;
+    opacity: 1;
 }
 .team-2018{
-    background: url(2018.png); 
+    background: url(assets/2018.png); 
     background-position: center;
+    background-size: cover;
     width: 13.07cm;
-    height: 9.47cm; position: relative;
+    height: 9.7cm;
+    position: relative;
 }
 .team-2017{
-    background: url(2017.png); 
+    background: url(assets/2017.png); 
     background-position: center;
+    background-size:contain;
     width: 13.07cm;
-    height: 9.47cm; position: relative;
+    height: 9.82cm;
+    position: relative;
+}
+/* Nav Bat css */
+header{
+    font-size: 20px;
+    position: fixed; width: 100%;
+    z-index:99 ;
+}
+.nav-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav-content{
+    display: flex;
+    column-gap: var(--nav-margin);
+}
+.nav-content>a{
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    color: var(--text-dark-accent);
+    transition: ease-in-out 250ms;
+}
+.nav-content>a::before{
+    position: absolute;
+    content:'';
+    display: block;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--text-dark-accent);
+    transition: ease-in-out 250ms;
+}
+.nav-content>a:hover{
+    opacity: 0.7;
 }
 
-@media screen and (max-width:1000px) {
+.nav-content>a:hover::before{
+    width: 100%;
+}
+
+.nav-unscrolled .nav-main{
+    margin:30px var(--nav-margin);
+    transition: 250ms ease-out;
+}
+.nav-unscrolled .nav-img{
+    width: 80px;height: 80px;
+    transition: 250ms ease-out;
+}
+
+.nav-scrolled{
+    background-color: var(--bg-accent);
+    box-shadow: 0px 0px 5px 0;
+}
+
+.nav-scrolled .nav-main{
+    margin: 5px 40px;
+    transition: 250ms ease-out;
+}
+.nav-scrolled .nav-img{
+    width: 60px; height: 60px;
+    transition: 250ms ease-out;
+}
+/* Media queries for small screens */
+@media screen and (max-width: 1000px){
+    header{
+        font-size: 14px;
+    }
+    .nav-main{
+        margin: 0 5px;
+    }  
+    .nav-content{
+    
+        column-gap: 5px;
+    }  
     .team-head{
         padding-left:0;padding-right:0;
     }
+    .team-2019 .circle,
+    .team-2020 .square{
+        stroke:#45abff;
+    }
+}
+@media screen and (max-width: 500px){
+    header{
+        font-size: 14px;
+    }
+    .nav-unscrolled .nav-main{
+        margin: 10px;
+    }  
+    .nav-scrolled .nav-main{
+        margin: 10px;
+    }  
+    .nav-content{
+        column-gap: 5px;
+    }
+ 
 }
