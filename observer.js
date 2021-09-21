@@ -1,8 +1,9 @@
+console.log(18)
 const header = document.querySelector("header");
 const sectionOne = document.querySelector(".ban1");
 
 const sectionOneOptions = {
-  rootMargin: "-300px 0px 0px 0px"
+  rootMargin: "-150px 0px 0px 0px"
 };
 
 const sectionOneObserver = new IntersectionObserver(function(
@@ -10,6 +11,7 @@ const sectionOneObserver = new IntersectionObserver(function(
   sectionOneObserver
 ) {
   entries.forEach(entry => {
+
     if (!entry.isIntersecting) {
       header.classList.remove("nav-unscrolled");
       header.classList.add("nav-scrolled");
