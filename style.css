@@ -11,19 +11,16 @@
 *::after{
     box-sizing: border-box;
 }
-
 body{
-    
     background: floralwhite;
+    font-size: 15px;
     font-family: 'Ubuntu Mono', monospace;
-    font-size: 14px;
     margin: 0;
     padding: 0;
-
-
 }
 .curr-team-card{
     display: flex;
+    margin-top: 4rem;
     flex-direction: column;
     gap: 5rem;
     padding-bottom: 5rem;
@@ -46,12 +43,12 @@ body{
     color:var(--text-accent);
     background: var(--bg-black);
     padding: 6rem 0 0;
-    width: 14.5rem;
-    height: 12rem;
+    width: 16rem;
+    height: 19rem;
     border-radius: 0.5rem;
     overflow: hidden;
     align-content: center;
-    box-shadow: 0rem 0.1rem 3rem 0rem var(--bg-black);
+    box-shadow: 0rem .5rem 5rem 0rem var(--bg-black);
 
     min-width:3rem;
     
@@ -66,9 +63,8 @@ body{
     --padding: 1rem;
     position: absolute;
     align-content: center;
-    width: 13rem;
+    width: 16rem;
     bottom: 0;
-    height:4rem;
     padding:var(--padding);
     background: linear-gradient(
         hsl(0 0% 0% / 0),
@@ -76,7 +72,7 @@ body{
         hsl(255 0% 0% / 0.8)
     );
 
-    transform: translateY(3rem);
+    transform: translateY(5rem);
     transition: transform var(--transition);
 }
 .card-bg:focus-within .card-content
@@ -85,7 +81,7 @@ body{
 }
 .card-bg:focus-within .card-content,
 .card-bg:hover .card-content{
-    transform: translateY(1px);
+    transform: translateY(1rem);
     transition-delay: 0.2s;
 } 
 
@@ -93,7 +89,6 @@ body{
     font-size: 1.3rem;
     width: max-content;
     position: relative;
-    padding-bottom: 3px;
     
 }
 
@@ -103,7 +98,7 @@ body{
     left: calc(var(--padding)*-1);
     bottom: 0;
     z-index: -1;
-    height: 2px;
+    height: 3px;
     width: calc(var(--padding) + 100%);
     background: var(--bg-accent);
     transform: scaleX(0);
@@ -119,7 +114,6 @@ body{
     /* display: flex; */
     align-items: center;
     justify-content: space-between;
-    margin-top: 0.5rem;
 }
 
 .card-redirect{
@@ -131,7 +125,7 @@ body{
     text-decoration: none;
     font-weight: bold;
     background:var(--bg-accent);
-    color: var(--text-dark-accent);
+    color: #13181c;
     width: fit-content;
     height: fit-content;
     gap: 4px;
@@ -143,6 +137,7 @@ body{
 .card-redirect:hover,
 .card-redirect:focus{
     background-color: var(--text-accent);
+    color: #13181c;
 }
 
 /* Carousel */
@@ -197,7 +192,10 @@ body{
 }
 /* Nav Bat css */
 header{
+    font-family: 'Oswald', sans-serif;
     font-size: 20px;
+    color: aliceblue;
+    box-shadow: #13181c;
     position: fixed; width: 100%;
     z-index:99 ;
 }
@@ -205,6 +203,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    text-shadow: 1px 2px 5px #000;
     
 }
 .nav-content{
@@ -279,17 +279,12 @@ header{
     }
 }
 @media screen and (max-width: 500px){
-    header{
-        font-size: 14px;
-    }
+ 
     .nav-unscrolled .nav-main{
         margin: 10px;
     }  
     .nav-scrolled .nav-main{
         margin: 10px;
     }  
-    .nav-content{
-        column-gap: 5px;
-    }
- 
+
 }
