@@ -2,7 +2,7 @@
     --bg-black:#000;
     --text-accent: rgb(231, 219, 183);
     --text-dark-accent:#13181c;
-    --bg-accent:#43d3a3;
+    --bg-accent:turquoise;
     --transition: 0.1s ease;
     --nav-margin:80px;
 
@@ -13,8 +13,8 @@
 }
 body{
     background: floralwhite;
-    font-size: 15px;
-    font-family: 'Ubuntu Mono', monospace;
+    font-size: 18px;
+    font-family: 'Open Sans', serif;
     margin: 0;
     padding: 0;
 }
@@ -36,15 +36,15 @@ body{
     display: grid;
     place-items: center;
     gap: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
 }
 .card-bg{
     position: relative;
     color:var(--text-accent);
     background: var(--bg-black);
     padding: 6rem 0 0;
-    width: 16rem;
-    height: 19rem;
+    width: 19rem;
+    height: 21rem;
     border-radius: 0.5rem;
     overflow: hidden;
     align-content: center;
@@ -63,7 +63,7 @@ body{
     --padding: 1rem;
     position: absolute;
     align-content: center;
-    width: 16rem;
+    width: 19rem;
     bottom: 0;
     padding:var(--padding);
     background: linear-gradient(
@@ -111,7 +111,7 @@ body{
     transform: scaleX(1);
 }
 .card-body{
-    /* display: flex; */
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
@@ -209,6 +209,7 @@ header{
 }
 .nav-content{
     display: flex;
+    justify-content: center;
     column-gap: var(--nav-margin);
 }
 .nav-content>a{
@@ -258,10 +259,15 @@ header{
     width: 60px; height: 60px;
     transition: 250ms ease-out;
 }
-/* Media queries for small screens */
+/* Media queries for different screens */
+@media screen and (min-width: 1700px){
+    .team{
+        grid-template-columns: repeat(auto-fit, minmax(32rem,1fr));
+    }
+}
 @media screen and (max-width: 1000px){
     header{
-        font-size: 14px;
+        font-size: 16px;
     }
     .nav-main{
         margin: 0 5px;
@@ -279,7 +285,19 @@ header{
     }
 }
 @media screen and (max-width: 500px){
- 
+    header{
+        font-size: 12px;
+    }
+    .nav-content{
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-content::before{
+        height: 2rem;
+        content: '';
+        width: 2px;
+        background-color:#000;
+    }
     .nav-unscrolled .nav-main{
         margin: 10px;
     }  
