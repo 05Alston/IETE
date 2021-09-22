@@ -36,7 +36,7 @@ body{
     display: grid;
     place-items: center;
     gap: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
 }
 .card-bg{
     position: relative;
@@ -260,9 +260,9 @@ header{
     transition: 250ms ease-out;
 }
 /* Media queries for different screens */
-@media screen and (min-width: 1700px){
+@media screen and (min-width: 1400px){
     .team{
-        grid-template-columns: repeat(auto-fit, minmax(32rem,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
     }
 }
 @media screen and (max-width: 1000px){
