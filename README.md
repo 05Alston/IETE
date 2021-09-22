@@ -1,7 +1,6 @@
 # IETE
 
 TODO:
-    Change UI color
-    Fix LinkedIn links
-    Add Footer/ Info
-    Edit Former teams Page
+    Change UI color.
+    Fix LinkedIn links.
+    Edit Former teams Page.
