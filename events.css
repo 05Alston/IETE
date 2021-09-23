@@ -3,7 +3,7 @@
     /* display: flex; */
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 30px;
 }
 
 .card{
@@ -21,7 +21,7 @@
 }
 
 #card2021{
-    margin-bottom: 11rem;
+    margin-bottom: 13rem;
 }
 
 #card2019{
@@ -29,7 +29,7 @@
 }
 
 #card2016{
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .section-heading {
