@@ -64,3 +64,12 @@
     gap: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
 }
+
+.elements{
+   padding-left: 40px;
+   padding-right: 20px;
+}
+
+.imageelements{
+    padding-right: 10%;
+}
