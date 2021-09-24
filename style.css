@@ -63,7 +63,7 @@ body::-webkit-scrollbar-thumb{
     width: 19rem;
     height: 21rem;
     border-radius: 0.5rem;
-    /* overflow: hidden; */
+    overflow: hidden;
     align-content: center;
     box-shadow: 0rem .5rem 5rem 0rem var(--bg-black);
 
