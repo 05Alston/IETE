@@ -11,6 +11,7 @@
 *::after{
     box-sizing: border-box;
 }
+
 body{
     background: floralwhite;
     font-size: 18px;
@@ -18,6 +19,22 @@ body{
     margin: 0;
     padding: 0;
 }
+
+/* Scrollbar CSS */
+body::-webkit-scrollbar{
+    width: .5vw;
+    /* padding-right: 5px; */
+}
+body::-webkit-scrollbar-track{
+    background-color: transparent;
+
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--bg-accent);
+    border-radius: 1rem;
+}
+
+/* Current Team CSS */
 .curr-team-card{
     display: flex;
     margin-top: 4rem;
@@ -46,7 +63,7 @@ body{
     width: 19rem;
     height: 21rem;
     border-radius: 0.5rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     align-content: center;
     box-shadow: 0rem .5rem 5rem 0rem var(--bg-black);
 
@@ -81,7 +98,7 @@ body{
 }
 .card-bg:focus-within .card-content,
 .card-bg:hover .card-content{
-    transform: translateY(1rem);
+    transform: translateY(0);
     transition-delay: 0.2s;
 } 
 
@@ -140,7 +157,7 @@ body{
     color: #13181c;
 }
 
-/* Carousel */
+/* Carousel
 .carousel {
     height: 100vh;
 }
@@ -148,21 +165,20 @@ body{
 .carousel-img {
     height: 100vh;
     object-fit: cover;
-}
+} */
 
-/* Former team page css */
-.former-team-grid{
-    display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(12.5cm,1fr));  */
+/* Former Team Page CSS */
+.former-team-flex{
+    display: flex;
     gap: 5rem;
-    align-items: center; 
-    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .team-2020{
     background: url(assets/2020.png); 
     background-size: cover;
-    width: 13.07cm;
-    height: 18.50cm; 
+    width: 12cm;
+    height: 17cm; 
     position: relative;
 }
 .circle,
@@ -175,8 +191,8 @@ body{
     background: url(assets/2019.png);
     background-size: cover;
 
-    width: 13.07cm;
-    height: 18.50cm; 
+    width: 12cm;
+    height: 17cm; 
     position: relative;
 }
 .team-2020:hover .square,
@@ -187,19 +203,19 @@ body{
     background: url(assets/2018.png); 
     background-position: center;
     background-size: cover;
-    width: 13.07cm;
-    height: 9.7cm;
+    width: 12cm;
+    height: 8.7cm;
     position: relative;
 }
 .team-2017{
     background: url(assets/2017.png); 
     background-position: center;
     background-size:cover;
-    width: 13.07cm;
-    height: 9.82cm;
+    width: 12cm;
+    height: 9cm;
     position: relative;
 }
-/* Nav Bat css */
+/* Nav Bar CSS */
 header{
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
@@ -275,9 +291,6 @@ header{
     .team{
         grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
     }
-    .former-team-grid{
-        grid-template-columns: repeat(auto-fit, minmax(16.5cm,1fr));
-    }
 }
 @media screen and (max-width: 1000px){
     header{
@@ -293,16 +306,20 @@ header{
     .team-head{
         padding-left:0;padding-right:0;
     }
+    .former-team-flex{
+        flex-direction: column;
+    }
     .team-2019 .circle,
     .team-2020 .square{
         stroke:#45abff;
     }
 }
 @media screen and (max-width: 500px){
-    .team-2020{width: 320px; height: 10cm;}
-    .team-2019{width: 320px; height: 10cm;}
-    .team-2018{width: 320px; height: 10cm;}
-    .team-2017{width: 320px; height: 10cm;}
+    
+    .team-2020{width: 320px; height: 12cm;}
+    .team-2019{width: 320px; height: 12cm;}
+    .team-2018{width: 320px; height: 6.2cm;}
+    .team-2017{width: 320px; height: 6.4cm;}
     
     header{
         font-size: 12px;
