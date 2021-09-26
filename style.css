@@ -338,10 +338,10 @@ header{
 }
 @media screen and (max-width: 500px){
     
-    .team-2020{width: 320px; height: 12cm;}
-    .team-2019{width: 320px; height: 12cm;}
-    .team-2018{width: 320px; height: 6.2cm;}
-    .team-2017{width: 320px; height: 6.4cm;}
+    .team-2020{width: 315px; height: 11.87cm;}
+    .team-2019{width: 315px; height: 11.87cm;}
+    .team-2018{width: 315px; height: 6.07cm;}
+    .team-2017{width: 315px; height: 6.27cm;}
     
     header{
         font-size: 12px;
