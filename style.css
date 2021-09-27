@@ -183,6 +183,13 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
     justify-content: space-evenly;
 }
+.former-team-body{
+    border: 1px solid #aaa; 
+    border-radius: .8rem;
+    overflow: hidden; 
+    padding-top: .5rem; 
+    width: fit-content;
+}
 .team-2020{
     background: url(assets/2020.png); 
     background-size: cover;
@@ -346,7 +353,7 @@ header{
     }
 }
 @media screen and (max-width: 500px){
-    
+    .former-team-body{width: 315px;}    
     .team-2020{width: 315px; height: 11.87cm;}
     .team-2019{width: 315px; height: 11.87cm;}
     .team-2018{width: 315px; height: 6.07cm;}
