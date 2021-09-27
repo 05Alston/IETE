@@ -60,6 +60,7 @@ body::-webkit-scrollbar-thumb{
     display: grid;
     place-items: center;
     gap: 5rem;
+    column-gap: 7rem;
     grid-template-columns: repeat(auto-fit, minmax(17rem,1fr));
 }
 .card-bg{
@@ -235,7 +236,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-shadow: 1px 2px 5px var(--text-dark-accent);
+    text-shadow: 1px 0px 7px var(--text-dark-accent);
 }
 .nav-content{
     display: flex;
@@ -270,17 +271,22 @@ header{
 .nav-content>a:hover{
     opacity: 0.7;
 }
-.nav-head>a:hover::before
+.nav-head>a:focus-within::before,
+.nav-content>a:focus-within::before{
+    transition: 0ms;
+}
+.nav-head>a:hover::before,
 .nav-content>a:hover::before{
     width: 100%;
 }
+
 .nav-unscrolled .nav-head>a,
 .nav-unscrolled .nav-content>a{
     color: var(--bg-dark-accent);
     text-decoration: none;
 }
 .nav-unscrolled .nav-main{
-    text-shadow: 1px 2px 5px var(--text-dark-accent);
+ 
     margin:30px var(--nav-margin);
     transition: 250ms ease-out;
 }
@@ -299,13 +305,16 @@ header{
     text-decoration: none;
 }
 .nav-scrolled .nav-main{
-    /* text-shadow: 1px 2px 5px var(--text-accent); */
+    
     margin: 5px 40px;
     transition: 250ms ease-out;
 }
 .nav-scrolled .nav-img{
     width: 60px; height: 60px;
     transition: 250ms ease-out;
+}
+.nav-scrolled .nav-content>a::before{
+    background: var(--bg-accent);
 }
 /* Media queries for different screens */
 
