@@ -65,7 +65,7 @@
     justify-items: center;
     align-items: center;
     gap: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(17rem,1fr));
 }
 
 .elements{
