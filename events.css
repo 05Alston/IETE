@@ -20,8 +20,8 @@
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
-#card2021{
-    margin-bottom: 16rem;
+/* #card2021{
+    margin-bottom: 11rem;
 }
 
 #card2019{
@@ -29,8 +29,8 @@
 }
 
 #card2016{
-    margin-bottom: 13rem;
-}
+    margin-bottom: 8rem;
+} */
 
 .section-heading {
     margin: 25px;
@@ -47,10 +47,6 @@
     background: turquoise;
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-}
-
-.img-2020{
-    width: 315px;
 }
 
 .allevents{
