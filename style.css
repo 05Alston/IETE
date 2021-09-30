@@ -15,6 +15,7 @@
 
 body{
     background: var(--body-accent);
+    background-color: #e2e2eb;
     /* url(bg.jpeg) ;
     background-blend-mode: overlay ;
     background-repeat: repeat;
