@@ -4,20 +4,20 @@
   font-family: Open Sans;
 } */
 
-section {
+/* footer {
   width: 100%;
   display: inline-block;
-  background: #333;
+  background: rgb(23,29,75);
   height: 50vh;
   text-align: center;
   font-size: 22px;
   font-weight: 700;
   text-decoration: underline;
-}
+} */
 
 .footer-distributed{
-	background: #666;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	background: rgb(23,29,75);
+	box-shadow: -2px -5px 50px 0 rgba(0, 0, 0, 0.42);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
@@ -67,7 +67,7 @@ section {
 }
 
 .footer-distributed .footer-company-name{
-	color:  #222;
+	color:  white;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;

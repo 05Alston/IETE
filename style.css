@@ -1,8 +1,9 @@
 :root{
-    --bg-black:#000;
-    --text-accent: rgb(231, 219, 183);
+    --bg-dark-accent:rgb(23,29,75);
+    --body-accent: #dbf5fa;
     --text-dark-accent:#13181c;
-    --bg-accent:turquoise;
+    --bg-accent:#EEFCFF;
+    --text-accent:rgb(46, 211, 198);
     --transition: 0.1s ease;
     --nav-margin:80px;
 
@@ -13,13 +14,28 @@
 }
 
 body{
-    background: floralwhite;
+    background: var(--body-accent);
+    background-color: #e2e2eb;
+    /* url(bg.jpeg) ;
+    background-blend-mode: overlay ;
+    background-repeat: repeat;
+    background-size: contain; */
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background-blend-mode: multiply;
     font-size: 18px;
-    font-family: 'Open Sans', serif;
+    font-family: 'DM Mono', monospace;
     margin: 0;
     padding: 0;
 }
-
+span{
+    display: block;
+}
+span.active{
+    transform: translateY(0);
+    transition: .5s ease-in;
+}
 /* Scrollbar CSS */
 body::-webkit-scrollbar{
     width: .5vw;
@@ -30,7 +46,7 @@ body::-webkit-scrollbar-track{
 
 }
 body::-webkit-scrollbar-thumb{
-    background-color: var(--bg-accent);
+    background-color: var(--bg-dark-accent);
     border-radius: 1rem;
 }
 
@@ -53,19 +69,19 @@ body::-webkit-scrollbar-thumb{
     display: grid;
     place-items: center;
     gap: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
+    column-gap: 8rem;
+    grid-template-columns: repeat(auto-fit, minmax(17rem,1fr));
 }
 .card-bg{
     position: relative;
-    color:var(--text-accent);
-    background: var(--bg-black);
+    color:var(--bg-accent);
     padding: 6rem 0 0;
     width: 19rem;
     height: 21rem;
     border-radius: 0.5rem;
     overflow: hidden;
     align-content: center;
-    box-shadow: 0rem .5rem 5rem 0rem var(--bg-black);
+    box-shadow: 0rem .5rem 2rem 0rem var(--text-dark-accent);
 
     min-width:3rem;
     
@@ -118,7 +134,7 @@ body::-webkit-scrollbar-thumb{
     z-index: -1;
     height: 3px;
     width: calc(var(--padding) + 100%);
-    background: var(--bg-accent);
+    background: #A2C6CF;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform var(--transition);
@@ -143,8 +159,8 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
     text-decoration: none;
     font-weight: bold;
-    background:var(--bg-accent);
-    color: #13181c;
+    background:#add2eb;
+    color: var(--text-dark-accent);
     width: fit-content;
     height: fit-content;
     gap: 4px;
@@ -155,19 +171,18 @@ body::-webkit-scrollbar-thumb{
 
 .card-redirect:hover,
 .card-redirect:focus{
-    background-color: var(--text-accent);
-    color: #13181c;
+    background-color:var(--bg-accent);
+    color: var(--text-dark-accent);
 }
 
-/* Carousel
-.carousel {
+/*Carousel CSS*/
+.carimg {
+    
+    object-fit:cover;
+    width: 100%;
     height: 100vh;
 }
 
-.carousel-img {
-    height: 100vh;
-    object-fit: cover;
-} */
 
 /* Former Team Page CSS */
 .former-team-flex{
@@ -175,6 +190,13 @@ body::-webkit-scrollbar-thumb{
     gap: 5rem;
     align-items: center;
     justify-content: space-evenly;
+}
+.former-team-body{
+    border: 1px solid #aaa; 
+    border-radius: .8rem;
+    overflow: hidden; 
+    padding-top: .5rem; 
+    width: fit-content;
 }
 .team-2020{
     background: url(assets/2020.png); 
@@ -206,7 +228,7 @@ body::-webkit-scrollbar-thumb{
     background-position: center;
     background-size: cover;
     width: 12cm;
-    height: 8.7cm;
+    height: 8.9cm;
     position: relative;
 }
 .team-2017{
@@ -214,15 +236,14 @@ body::-webkit-scrollbar-thumb{
     background-position: center;
     background-size:cover;
     width: 12cm;
-    height: 9cm;
+    height: 8.95cm;
     position: relative;
 }
 /* Nav Bar CSS */
 header{
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
-    color: aliceblue;
-    box-shadow: #13181c;
+    box-shadow:  2rem var(--bg-dark-accent);
     position: fixed; width: 100%;
     z-index:99 ;
 }
@@ -230,15 +251,19 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    text-shadow: 1px 2px 5px #000;
-    
+    text-shadow: 1px 0px 7px var(--text-dark-accent);
 }
 .nav-content{
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 1rem;
+    column-gap: 2rem;
+}
+
+.nav-head{
+    display: flex; 
+    column-gap: 10px;
+    align-items: center;
 }
 .nav-content>a{
     text-decoration: none;
@@ -257,35 +282,56 @@ header{
     background: var(--text-dark-accent);
     transition: ease-in-out 250ms;
 }
+.nav-head>a:hover,
 .nav-content>a:hover{
     opacity: 0.7;
 }
-
+.nav-head>a:focus-within::before,
+.nav-content>a:focus-within::before{
+    transition: 0ms;
+}
+.nav-head>a:hover::before,
 .nav-content>a:hover::before{
     width: 100%;
 }
 
+.nav-unscrolled .nav-head>a,
+.nav-unscrolled .nav-content>a{
+    color: var(--bg-dark-accent);
+    text-decoration: none;
+}
 .nav-unscrolled .nav-main{
+ 
     margin:30px var(--nav-margin);
     transition: 250ms ease-out;
 }
 .nav-unscrolled .nav-img{
+    box-shadow: #EEFCFF;
     width: 80px;height: 80px;
     transition: 250ms ease-out;
 }
 
 .nav-scrolled{
-    background-color: var(--bg-accent);
+    background-color: var(--bg-dark-accent);
     box-shadow: 0px 0px 5px 0;
 }
-
+.nav-scrolled .nav-head>a,
+.nav-scrolled .nav-content>a{
+    color: var(--bg-accent);
+    text-decoration: none;
+}
 .nav-scrolled .nav-main{
+    
     margin: 5px 40px;
     transition: 250ms ease-out;
 }
 .nav-scrolled .nav-img{
+    text-shadow: 1px 1px 10px #EEFCFF;
     width: 60px; height: 60px;
     transition: 250ms ease-out;
+}
+.nav-scrolled .nav-content>a::before{
+    background: var(--bg-accent);
 }
 /* Media queries for different screens */
 
@@ -317,11 +363,11 @@ header{
     }
 }
 @media screen and (max-width: 500px){
-    
-    .team-2020{width: 320px; height: 12cm;}
-    .team-2019{width: 320px; height: 12cm;}
-    .team-2018{width: 320px; height: 6.2cm;}
-    .team-2017{width: 320px; height: 6.4cm;}
+    .former-team-body{width: 315px;}    
+    .team-2020{width: 315px; height: 11.87cm;}
+    .team-2019{width: 315px; height: 11.87cm;}
+    .team-2018{width: 315px; height: 6.07cm;}
+    .team-2017{width: 315px; height: 6.27cm;}
     
     header{
         font-size: 12px;
@@ -334,7 +380,7 @@ header{
         height: 2rem;
         content: '';
         width: 2px;
-        background-color:#000;
+        background-color:var(--text-dark-accent);
     }
     .nav-unscrolled .nav-main{
         margin: 10px;

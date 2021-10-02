@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 30px;
+    background-color: #dbf5fa;
 }
 
 .card{
@@ -20,8 +21,8 @@
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
-#card2021{
-    margin-bottom: 13rem;
+/* #card2021{
+    margin-bottom: 11rem;
 }
 
 #card2019{
@@ -29,8 +30,8 @@
 }
 
 #card2016{
-    margin-bottom: 3rem;
-}
+    margin-bottom: 8rem;
+} */
 
 .section-heading {
     margin: 25px;
@@ -44,11 +45,10 @@
 
 .section-heading:hover {
     /* padding: 4px 48px; */
-    background: turquoise;
+    background: #dbf5fa;
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
-  
 
 .allevents{
     display: flex;
@@ -62,7 +62,7 @@
     justify-items: center;
     align-items: center;
     gap: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(17rem,1fr));
 }
 
 .elements{
@@ -70,3 +70,6 @@
    padding-right: 20px;
 }
 
+.img{
+    width: 100%;
+}
