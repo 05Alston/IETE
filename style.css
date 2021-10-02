@@ -14,8 +14,8 @@
 }
 
 body{
-    background: var(--body-accent);
-    background-color: #e2e2eb;
+    /* background: var(--body-accent); */
+    /* background-color: #e2e2eb; */
     /* url(bg.jpeg) ;
     background-blend-mode: overlay ;
     background-repeat: repeat;
@@ -25,7 +25,7 @@ body{
     height: 100%;
     background-blend-mode: multiply;
     font-size: 18px;
-    font-family: 'DM Mono', monospace;
+    /* font-family: 'DM Mono', monospace; */
     margin: 0;
     padding: 0;
 }
