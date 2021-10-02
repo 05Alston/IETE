@@ -175,15 +175,14 @@ body::-webkit-scrollbar-thumb{
     color: var(--text-dark-accent);
 }
 
-/* Carousel
-.carousel {
+/*Carousel CSS*/
+.carimg {
+    
+    object-fit:cover;
+    width: 100%;
     height: 100vh;
 }
 
-.carousel-img {
-    height: 100vh;
-    object-fit: cover;
-} */
 
 /* Former Team Page CSS */
 .former-team-flex{
