@@ -3,7 +3,7 @@ const header = document.querySelector("header");
 const sectionOne = document.querySelector(".ban1");
 
 const sectionOneOptions = {
-  rootMargin: "-150px 0px 0px 0px"
+  rootMargin: "-100px 0px 0px 0px"
 };
 
 const sectionOneObserver = new IntersectionObserver(function(
