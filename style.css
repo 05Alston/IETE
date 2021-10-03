@@ -276,7 +276,7 @@ header{
     color: var(--text-dark-accent);
     transition: ease-in-out 250ms;
 }
-.hamburger {
+.hamburger{
     display: none;
     padding: 0;
     border: none;
@@ -425,16 +425,15 @@ header{
 
         flex-direction: column;
         justify-content: flex-start;
-        background-color: rgba(255, 255,255, 0.5);
+        background-color: rgba(255, 239, 239, 0.5);
         width: 40%;
+        top: 0;
         height: 100%;
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
         box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
     }
-    .nav-unscrolled .nav-links{top: 9rem;}
-    .nav-scrolled .nav-links{top: 4.7rem;}
     .nav-unscrolled .nav-links>a,
     .nav-scrolled .nav-links>a{
         color:var(--bg-dark-accent);
@@ -450,6 +449,7 @@ header{
         display: block;
         cursor: pointer;
     }
+
     .hamburger.active>span:nth-child(2) {
         opacity: 0;
     }
