@@ -404,12 +404,7 @@ header{
         align-items: center;
         justify-content: center;
     }
-    .nav-links::before{
-        height: 2rem;
-        content: '';
-        width: 2px;
-        background-color:var(--text-dark-accent);
-    }
+ 
     .nav-unscrolled .nav-main{
         margin: 10px;
     }  
