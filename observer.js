@@ -1,4 +1,3 @@
-console.log(18)
 const header = document.querySelector("header");
 const sectionOne = document.querySelector(".ban1");
 

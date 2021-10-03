@@ -255,6 +255,9 @@ header{
 }
 .nav-content{
     display: flex;
+}
+.nav-links{
+    display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 2rem;
@@ -265,14 +268,27 @@ header{
     column-gap: 10px;
     align-items: center;
 }
-.nav-content>a{
+.nav-links>a{
     text-decoration: none;
     text-transform: uppercase;
     position: relative;
     color: var(--text-dark-accent);
     transition: ease-in-out 250ms;
 }
-.nav-content>a::before{
+.hamburger {
+    display: block;
+}
+.hamburger>span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--text-dark-accent);
+}
+
+.nav-links>a::before{
     position: absolute;
     content:'';
     display: block;
@@ -283,20 +299,20 @@ header{
     transition: ease-in-out 250ms;
 }
 .nav-head>a:hover,
-.nav-content>a:hover{
+.nav-links>a:hover{
     opacity: 0.7;
 }
 .nav-head>a:focus-within::before,
-.nav-content>a:focus-within::before{
+.nav-links>a:focus-within::before{
     transition: 0ms;
 }
 .nav-head>a:hover::before,
-.nav-content>a:hover::before{
+.nav-links>a:hover::before{
     width: 100%;
 }
 
 .nav-unscrolled .nav-head>a,
-.nav-unscrolled .nav-content>a{
+.nav-unscrolled .nav-links>a{
     color: var(--bg-dark-accent);
     text-decoration: none;
 }
@@ -316,7 +332,7 @@ header{
     box-shadow: 0px 0px 5px 0;
 }
 .nav-scrolled .nav-head>a,
-.nav-scrolled .nav-content>a{
+.nav-scrolled .nav-links>a{
     color: var(--bg-accent);
     text-decoration: none;
 }
@@ -329,7 +345,7 @@ header{
     width: 60px; height: 60px;
     transition: 250ms ease-out;
 }
-.nav-scrolled .nav-content>a::before{
+.nav-scrolled .nav-links>a::before{
     background: var(--bg-accent);
 }
 /* Media queries for different screens */
@@ -346,7 +362,7 @@ header{
     .nav-main{
         margin: 0 5px;
     }  
-    .nav-content{
+    .nav-links{
     
         column-gap: 5px;
     }  
@@ -361,7 +377,7 @@ header{
         stroke:#45abff;
     }
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     .former-team-body{width: 315px;}    
     .team-2020{width: 315px; height: 11.87cm;}
     .team-2019{width: 315px; height: 11.87cm;}
@@ -371,11 +387,11 @@ header{
     header{
         font-size: 12px;
     }
-    .nav-content{
+    .nav-links{
         align-items: center;
         justify-content: center;
     }
-    .nav-content::before{
+    .nav-links::before{
         height: 2rem;
         content: '';
         width: 2px;
