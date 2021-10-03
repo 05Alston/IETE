@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,6 +12,7 @@
         crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
     <link rel="stylesheet" href="Footerstyles.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="events.css">
@@ -22,17 +22,24 @@
 <body style="padding: 0; margin: 0; overflow-x: hidden;">
     <header>
         <div class="nav-main">
-            <div class="nav-head">
-                <img src="https://iete.dbit.in/image/Logo_IETE.png" class="nav-img">
-                <a href="index.html" >IETE DBIT ISF</a>
+          <a  href="index.html" class="nav-head">
+            <img src="https://iete.dbit.in/image/Logo_IETE.png" alt="..." class="nav-img">
+            <p>IETE DBIT ISF</p>
+          </a>
+          <div class="nav-content">
+            <div class="nav-links">
+              <a href="about-us.html">About Us</a>
+              <a href="events.html">Events</a>
+              <a href="core-team.html">Core Team</a>
             </div>
-            <div class="nav-content">
-                <a href="about-us.html" >About Us</a>
-                <a href="events.html" >Events</a>
-                <a href="core-team.html" >Core Team</a>
-            </div>
+            <button class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
-    </header>
+      </header>
     <div style="width: 100%;height: 30vh;" class="ban1"></div>
     <h2 class="section-heading">Former Teams</h2>
     <div class="former-team-flex" style="padding-bottom: 5rem;">

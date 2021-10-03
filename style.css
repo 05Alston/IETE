@@ -267,6 +267,7 @@ header{
     display: flex; 
     column-gap: 10px;
     align-items: center;
+    text-decoration: none;
 }
 .nav-links>a{
     text-decoration: none;
@@ -276,7 +277,10 @@ header{
     transition: ease-in-out 250ms;
 }
 .hamburger {
-    display: block;
+    display: none;
+    padding: 0;
+    border: none;
+    background: none;
 }
 .hamburger>span{
     display: block;
@@ -298,20 +302,29 @@ header{
     background: var(--text-dark-accent);
     transition: ease-in-out 250ms;
 }
-.nav-head>a:hover,
-.nav-links>a:hover{
+.nav-unscrolled .hamburger>span{
+    background-color:var(--bg-dark-accent);
+}
+.nav-scrolled .hamburger>span{
+    background-color:#EEFCFF;
+}
+.nav-head>p{
+    margin-bottom: 0%;
+}
+.nav-head>p:hover,
+.nav-links>p:hover{
     opacity: 0.7;
 }
-.nav-head>a:focus-within::before,
+.nav-head>p:focus-within::before,
 .nav-links>a:focus-within::before{
     transition: 0ms;
 }
-.nav-head>a:hover::before,
+.nav-head>p:hover::before,
 .nav-links>a:hover::before{
     width: 100%;
 }
 
-.nav-unscrolled .nav-head>a,
+.nav-unscrolled .nav-head>p,
 .nav-unscrolled .nav-links>a{
     color: var(--bg-dark-accent);
     text-decoration: none;
@@ -331,7 +344,7 @@ header{
     background-color: var(--bg-dark-accent);
     box-shadow: 0px 0px 5px 0;
 }
-.nav-scrolled .nav-head>a,
+.nav-scrolled .nav-head>p,
 .nav-scrolled .nav-links>a{
     color: var(--bg-accent);
     text-decoration: none;
@@ -403,5 +416,50 @@ header{
     .nav-scrolled .nav-main{
         margin: 10px;
     }  
+
+}
+@media only screen and (max-width: 768px) {
+    .nav-links { /* List*/
+        position: fixed;
+        right: -100%;
+
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: rgba(255, 255,255, 0.5);
+        width: 40%;
+        height: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav-unscrolled .nav-links{top: 9rem;}
+    .nav-scrolled .nav-links{top: 4.7rem;}
+    .nav-unscrolled .nav-links>a,
+    .nav-scrolled .nav-links>a{
+        color:var(--bg-dark-accent);
+        margin: 2.5rem 0;
+    }
+
+    .nav-links.active {
+        right: 0;
+        backdrop-filter: blur(5px);
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active>span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active>span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active>span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 
 }
