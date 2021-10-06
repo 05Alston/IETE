@@ -4,7 +4,7 @@
     --text-dark-accent:#13181c;
     --bg-accent:#EEFCFF;
     --text-accent:rgb(46, 211, 198);
-    --transition: 0.1s ease;
+    --transition: 0.3s ease;
     --nav-margin:80px;
 
 }
@@ -25,6 +25,7 @@ body{
     height: 100%;
     background-blend-mode: multiply;
     font-size: 20px;
+    line-height: 1;
     /* font-family: 'DM Mono', monospace; */
     margin: 0;
     padding: 0;
@@ -63,19 +64,19 @@ body::-webkit-scrollbar-thumb{
     place-items: center;
     gap: 5rem;
     padding-left:8rem;padding-right:8rem;
-    grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(17rem,1fr));
 }
 .team{
     display: grid;
     place-items: center;
     gap: 5rem;
-    column-gap: 8rem;
-    grid-template-columns: repeat(auto-fit, minmax(17rem,1fr));
+    column-gap: 50px;
+    margin: 0 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
 }
 .card-bg{
     position: relative;
     color:var(--bg-accent);
-    padding: 6rem 0 0;
     width: 19rem;
     height: 21rem;
     border-radius: 0.5rem;
@@ -106,7 +107,7 @@ body::-webkit-scrollbar-thumb{
         hsl(255 0% 0% / 0.8)
     );
 
-    transform: translateY(5rem);
+    transform: translateY(3.5rem);
     transition: transform var(--transition);
 }
 .card-bg:focus-within .card-content
@@ -148,7 +149,11 @@ body::-webkit-scrollbar-thumb{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0rem;
+    height: auto;
+}
+
+.card-body>p{
+    font-size: 1.4rem;
 }
 
 .card-redirect{
@@ -164,7 +169,7 @@ body::-webkit-scrollbar-thumb{
     width: fit-content;
     height: fit-content;
     gap: 4px;
-    padding: 0.6rem 0.5rem;
+    padding: 0.6rem 0.8rem;
     border-radius: 0.25rem;
 
 }
@@ -420,12 +425,13 @@ header{
 
         flex-direction: column;
         justify-content: flex-start;
-        background-color: rgba(255, 239, 239, 0.5);
-        width: 40%;
+        background-color: rgba(221, 221, 221, 0.8);
+        width: 100%;
+        line-height: .1;
         top: 0;
         padding-top: 4rem;
         height: 100%;
-        border-radius: 10px;
+        border-radius: 5px;
         text-align: center;
         transition: 0.3s;
         box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
