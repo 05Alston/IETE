@@ -82,10 +82,8 @@ body::-webkit-scrollbar-thumb{
     border-radius: 0.5rem;
     overflow: hidden;
     align-content: center;
-    box-shadow: 0rem .5rem 2rem 0rem var(--text-dark-accent);
-
-    min-width:3rem;
-    
+    box-shadow: 0rem 10px 50px 0rem #13181caa;
+   
     transition: transform 0.1s;
 }
 .card-bg:focus-within,
@@ -197,10 +195,11 @@ body::-webkit-scrollbar-thumb{
     justify-content: space-evenly;
 }
 .former-team-body{
-    border: 1px solid #aaa; 
+    border: 1px solid rgb(88, 88, 88); 
     border-radius: .8rem;
     overflow: hidden; 
-    padding-top: .5rem; 
+    box-shadow: 0rem 10px 50px 0rem #13181caa;
+    /* padding-top: .5rem;  */
     width: fit-content;
 }
 .team-2020{
@@ -303,7 +302,7 @@ header{
     display: block;
     bottom: 0;
     width: 0%;
-    height: 2px;
+    height: 3px;
     background: var(--text-dark-accent);
     transition: ease-in-out 250ms;
 }
@@ -367,12 +366,6 @@ header{
     background: var(--bg-accent);
 }
 /* Media queries for different screens */
-
-@media screen and (min-width: 1370px){
-    .team{
-        grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
-    }
-}
 @media screen and (max-width: 1000px){
     header{
         font-size: 16px;
