@@ -1,4 +1,3 @@
-console.log(18)
 const header = document.querySelector("header");
 const sectionOne = document.querySelector(".ban1");
 
@@ -24,3 +23,5 @@ const sectionOneObserver = new IntersectionObserver(function(
 sectionOneOptions);
 
 sectionOneObserver.observe(sectionOne);
+
+/*NavBar*/
