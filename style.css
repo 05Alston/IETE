@@ -14,12 +14,19 @@
 }
 
 body{
+    /* background: var(--body-accent); */
+    /* background-color: #e2e2eb; */
+    /* url(bg.jpeg) ;
+    background-blend-mode: overlay ;
+    background-repeat: repeat;
+    background-size: contain; */
     overflow-x: hidden;
     width: 100%;
     height: 100%;
     background-blend-mode: multiply;
     font-size: 20px;
     line-height: 1;
+    /* font-family: 'DM Mono', monospace; */
     margin: 0;
     padding: 0;
 }
@@ -33,6 +40,7 @@ span.active{
 /* Scrollbar CSS */
 body::-webkit-scrollbar{
     width: .5vw;
+    /* padding-right: 5px; */
 }
 body::-webkit-scrollbar-track{
     background-color: transparent;
@@ -195,7 +203,7 @@ body::-webkit-scrollbar-thumb{
     width: fit-content;
 }
 .team-2020{
-    background: url(/assets/2020.png); 
+    background: url(assets/2020.png); 
     background-size: cover;
     width: 12cm;
     height: 17cm; 
@@ -208,7 +216,7 @@ body::-webkit-scrollbar-thumb{
     transition: 0.2s;
 }
 .team-2019{
-    background: url(/assets/2019.png);
+    background: url(assets/2019.png);
     background-size: cover;
 
     width: 12cm;
@@ -220,7 +228,7 @@ body::-webkit-scrollbar-thumb{
     opacity: 1;
 }
 .team-2018{
-    background: url(/assets/2018.png); 
+    background: url(assets/2018.png); 
     background-position: center;
     background-size: cover;
     width: 12cm;
@@ -228,7 +236,7 @@ body::-webkit-scrollbar-thumb{
     position: relative;
 }
 .team-2017{
-    background: url(/assets/2017.png); 
+    background: url(assets/2017.png); 
     background-position: center;
     background-size:cover;
     width: 12cm;
